@@ -1,19 +1,28 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Michelangelo,_Creation_of_Adam_06.jpg" type="Texture" id=1]
+[ext_resource path="res://player.png" type="Texture" id=1]
 [ext_resource path="res://Sprite.gd" type="Script" id=2]
-[ext_resource path="res://superjesus_f799c7e9_900x900.jpg" type="Texture" id=3]
+[ext_resource path="res://health bar.png" type="Texture" id=3]
 
-[node name="Spatial" type="Spatial"]
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 37.75, 44 )
 
-[node name="focus" type="Sprite" parent="."]
-position = Vector2( 715.5, 496.5 )
-scale = Vector2( 0.17, 0.187778 )
-texture = ExtResource( 3 )
-script = ExtResource( 2 )
-velocitat_deg = 5
+[node name="Spatial" type="Node2D"]
 
-[node name="Sprite" type="Sprite" parent="focus"]
-position = Vector2( 538.235, -455.325 )
-scale = Vector2( 0.461538, 0.334746 )
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="dvd" type="Sprite" parent="Area2D"]
+position = Vector2( 878, 491 )
+scale = Vector2( 0.471525, 0.429677 )
 texture = ExtResource( 1 )
+script = ExtResource( 2 )
+velocitat_deg = 0
+
+[node name="Sprite" type="Sprite" parent="Area2D/dvd"]
+position = Vector2( 10.6045, 141.967 )
+scale = Vector2( 0.116939, 0.110652 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 880.75, 502 )
+shape = SubResource( 1 )

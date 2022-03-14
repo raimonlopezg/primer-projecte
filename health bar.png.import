@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Michelangelo,_Creation_of_Adam_06.jpg-b29e366daa94135407d25a157a064c96.stex"
+path="res://.import/health bar.png-08cbbfbb458cadcac1f2f03177b8ea8b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Michelangelo,_Creation_of_Adam_06.jpg"
-dest_files=[ "res://.import/Michelangelo,_Creation_of_Adam_06.jpg-b29e366daa94135407d25a157a064c96.stex" ]
+source_file="res://health bar.png"
+dest_files=[ "res://.import/health bar.png-08cbbfbb458cadcac1f2f03177b8ea8b.stex" ]
 
 [params]
 
