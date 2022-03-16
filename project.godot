@@ -11,8 +11,8 @@ config_version=4
 [application]
 
 config/name="Calvo Git"
-run/main_scene="res://focus rs.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://escenas/focus rs.tscn"
+config/icon="res://imatges/icon.png"
 
 [input]
 

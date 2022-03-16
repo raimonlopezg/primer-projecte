@@ -1,4 +1,3 @@
-extends "res://Sprite.gd"
 
 
 # Declare member variables here. Examples:

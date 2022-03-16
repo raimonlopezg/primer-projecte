@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://escenas/Sprite.gd" type="Script" id=1]
+[ext_resource path="res://imatges/player.png" type="Texture" id=3]
+[ext_resource path="res://imatges/health bar.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 13.9375, 16.75 )
+
+[node name="player" type="Area2D"]
+script = ExtResource( 1 )
+velocitat = Vector2( -150, -150 )
+
+[node name="avatar" type="Sprite" parent="."]
+position = Vector2( 4.76837e-07, 0 )
+scale = Vector2( 0.170536, 0.146429 )
+texture = ExtResource( 3 )
+
+[node name="healthbar" type="Sprite" parent="avatar"]
+position = Vector2( 10.6045, 141.967 )
+scale = Vector2( 0.116939, 0.110652 )
+texture = ExtResource( 4 )
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2( 1.0625, 2.25 )
+shape = SubResource( 1 )
