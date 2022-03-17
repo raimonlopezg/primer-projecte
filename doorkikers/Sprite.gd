@@ -29,7 +29,7 @@ func _process(delta):
 	position += direccio.normalized() * velocitat * delta
 	
 func _on_player_area_entered(area):
-	area.modulate = Color (1,1,1)
+	area.modulate = Color (0,1,0)
 	
 	if area.is_in_group('Final'):
 		modulate = Color (0,1,0)
