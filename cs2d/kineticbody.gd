@@ -7,6 +7,7 @@ var velocitat_de_salt = -550
 var gravetat = Vector2.DOWN*980
 
 func _physics_process(delta):
+	$AnimatedSprite.play('default')
 	velocitat.x = 0
 	velocitat += gravetat*delta
 	if Input.is_action_pressed("mou dreta"):
@@ -14,9 +15,8 @@ func _physics_process(delta):
 	if Input.is_action_pressed ("mou esquerra"):
 		velocitat += Vector2.LEFT * velocitat_base
 		
-	if Input.is_action_just_pressed("mou adalt") and is_on_floor():
+	if Input.is_action_just_pressed("mou adalt") :
 		velocitat.y = velocitat_de_salt
-	if Input.is_action_just_pressed("mou adalt") and is_on_wall():
-		velocitat.y = velocitat_de_salt
+	
 		
 	velocitat = move_and_slide(velocitat, Vector2.UP)
