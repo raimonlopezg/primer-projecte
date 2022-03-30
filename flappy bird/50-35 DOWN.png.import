@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/50-35 DOWN.png-b8191126540c5f583fb9980fc19a20cb.stex"
+path="res://.import/50-35 DOWN.png-90f4d3b0971bf9bc9dcd1719c7c84dfb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://50-35 DOWN.png"
-dest_files=[ "res://.import/50-35 DOWN.png-b8191126540c5f583fb9980fc19a20cb.stex" ]
+source_file="res://flappy bird/50-35 DOWN.png"
+dest_files=[ "res://.import/50-35 DOWN.png-90f4d3b0971bf9bc9dcd1719c7c84dfb.stex" ]
 
 [params]
 

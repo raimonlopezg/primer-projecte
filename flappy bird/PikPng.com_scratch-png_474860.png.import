@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/50-35 UP.png-6eb3e5c5343c1d7082e31e7005e0f542.stex"
+path="res://.import/PikPng.com_scratch-png_474860.png-6a9f9c8a5da1c8ad9713861dd13c6dee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://50-35 UP.png"
-dest_files=[ "res://.import/50-35 UP.png-6eb3e5c5343c1d7082e31e7005e0f542.stex" ]
+source_file="res://flappy bird/PikPng.com_scratch-png_474860.png"
+dest_files=[ "res://.import/PikPng.com_scratch-png_474860.png-6a9f9c8a5da1c8ad9713861dd13c6dee.stex" ]
 
 [params]
 
