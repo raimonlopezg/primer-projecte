@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://flappy bird/atardecer.jpg" type="Texture" id=1]
 [ext_resource path="res://flappy bird/50-35 DOWN.png" type="Texture" id=2]
 [ext_resource path="res://flappy bird/50-35 UP.png" type="Texture" id=3]
+[ext_resource path="res://flappy bird/—Pngtree—game over with yellow trophy_5995249.png" type="Texture" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -27,33 +28,33 @@ speed_scale = 0.2
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
-position = Vector2( 262, 283 )
+position = Vector2( 289, 331 )
 frames = SubResource( 1 )
 speed_scale = 0.2
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
-position = Vector2( 508, 300 )
+position = Vector2( 501, 409 )
 frames = SubResource( 1 )
 frame = 1
 speed_scale = 0.2
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="."]
-position = Vector2( 859, 165 )
+position = Vector2( 895, 140 )
 frames = SubResource( 1 )
 frame = 1
 speed_scale = 0.2
 playing = true
 
 [node name="AnimatedSprite5" type="AnimatedSprite" parent="."]
-position = Vector2( 886, 386 )
+position = Vector2( 793, 338 )
 frames = SubResource( 1 )
 speed_scale = 0.2
 playing = true
 
 [node name="AnimatedSprite6" type="AnimatedSprite" parent="."]
-position = Vector2( 610, 110 )
+position = Vector2( 640, 119 )
 frames = SubResource( 1 )
 speed_scale = 0.2
 playing = true
@@ -64,3 +65,8 @@ frames = SubResource( 1 )
 frame = 1
 speed_scale = 0.2
 playing = true
+
+[node name="—Pngtree—gameOverWithYellowTrophy5995249" type="Sprite" parent="."]
+position = Vector2( 512, 209 )
+scale = Vector2( 0.663333, 0.59 )
+texture = ExtResource( 4 )

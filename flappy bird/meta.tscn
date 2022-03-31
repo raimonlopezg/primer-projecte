@@ -3,7 +3,7 @@
 [ext_resource path="res://flappy bird/Finish-Line-PNG-HD.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 36, 1000 )
+extents = Vector2( 36, 3988.5 )
 
 [node name="meta" type="Area2D"]
 

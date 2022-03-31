@@ -23,13 +23,16 @@ func _physics_process(delta):
 		
 	velocitat = move_and_slide(velocitat, Vector2.UP)
 
+#terra:
 func _on_restart_body_entered(body):
 	if body.name == 'Flappy':
 		get_tree().reload_current_scene()
-
-
-
-
+#meta:
 func _on_meta_body_entered(body):
 	if body.name == 'Flappy':
 		get_tree().change_scene("res://flappy bird/escena final.tscn")
+#tubs:
+func _on_tubs_body_entered(body):
+	if body.name == 'Flappy':
+		get_tree().reload_current_scene()
+

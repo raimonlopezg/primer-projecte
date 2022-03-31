@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://flappy bird/meta.tscn" type="PackedScene" id=1]
 [ext_resource path="res://flappy bird/sostre.tscn" type="PackedScene" id=2]
@@ -6,22 +6,57 @@
 [ext_resource path="res://flappy bird/mapa.tscn" type="PackedScene" id=4]
 [ext_resource path="res://flappy bird/restart.tscn" type="PackedScene" id=5]
 [ext_resource path="res://flappy bird/terra.tscn" type="PackedScene" id=6]
+[ext_resource path="res://flappy bird/tubs junts.tscn" type="PackedScene" id=7]
+[ext_resource path="res://flappy bird/50-35 DOWN.png" type="Texture" id=8]
+[ext_resource path="res://flappy bird/50-35 UP.png" type="Texture" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="mapa" parent="." instance=ExtResource( 4 )]
 
+[node name="tubs" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1058, 249 )
+
+[node name="tubs2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1419, 145 )
+
+[node name="tubs3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1780, 341 )
+
+[node name="tubs4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2130, 251 )
+
+[node name="tubs5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2457, 169 )
+
+[node name="tubs6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2776, 373 )
+
+[node name="tubs7" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3092, 265 )
+
+[node name="tubs8" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3393, 358 )
+
 [node name="terra" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2046, 577 )
 
 [node name="sostre" parent="." instance=ExtResource( 2 )]
-position = Vector2( 2047, -23 )
+position = Vector2( 2047, -22 )
 
 [node name="restart" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2028, 407 )
+position = Vector2( 2046, 549 )
 
 [node name="meta" parent="." instance=ExtResource( 1 )]
-position = Vector2( 3595, 205 )
+position = Vector2( 4063, 263 )
 
 [node name="Flappy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 220, 245 )
@@ -36,5 +71,37 @@ drag_margin_top = 1.0
 drag_margin_bottom = 1.0
 editor_draw_drag_margin = true
 
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 4250, 160 )
+frames = SubResource( 1 )
+frame = 1
+speed_scale = 0.2
+playing = true
+flip_h = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 4310, 277 )
+frames = SubResource( 1 )
+frame = 1
+speed_scale = 0.2
+playing = true
+flip_h = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 4248, 398 )
+frames = SubResource( 1 )
+frame = 1
+speed_scale = 0.2
+playing = true
+flip_h = true
+
+[connection signal="body_entered" from="tubs" to="Flappy" method="_on_tubs_body_entered"]
+[connection signal="body_entered" from="tubs2" to="Flappy" method="_on_tubs_body_entered"]
+[connection signal="body_entered" from="tubs3" to="Flappy" method="_on_tubs_body_entered"]
+[connection signal="body_entered" from="tubs4" to="Flappy" method="_on_tubs_body_entered"]
+[connection signal="body_entered" from="tubs5" to="Flappy" method="_on_tubs_body_entered"]
+[connection signal="body_entered" from="tubs6" to="Flappy" method="_on_tubs_body_entered"]
+[connection signal="body_entered" from="tubs7" to="Flappy" method="_on_tubs_body_entered"]
+[connection signal="body_entered" from="tubs8" to="Flappy" method="_on_tubs_body_entered"]
 [connection signal="body_entered" from="restart" to="Flappy" method="_on_restart_body_entered"]
 [connection signal="body_entered" from="meta" to="Flappy" method="_on_meta_body_entered"]
