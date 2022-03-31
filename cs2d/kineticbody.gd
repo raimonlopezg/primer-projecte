@@ -28,3 +28,8 @@ func _on_restart_body_entered(body):
 		get_tree().reload_current_scene()
 
 
+
+
+func _on_meta_body_entered(body):
+	if body.name == 'Flappy':
+		get_tree().change_scene("res://flappy bird/escena final.tscn")

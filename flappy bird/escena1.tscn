@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://flappy bird/meta.tscn" type="PackedScene" id=1]
+[ext_resource path="res://flappy bird/sostre.tscn" type="PackedScene" id=2]
+[ext_resource path="res://flappy bird/flappy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://flappy bird/mapa.tscn" type="PackedScene" id=4]
+[ext_resource path="res://flappy bird/restart.tscn" type="PackedScene" id=5]
+[ext_resource path="res://flappy bird/terra.tscn" type="PackedScene" id=6]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="mapa" parent="." instance=ExtResource( 4 )]
+
+[node name="terra" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2046, 577 )
+
+[node name="sostre" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2047, -23 )
+
+[node name="restart" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2028, 407 )
+
+[node name="meta" parent="." instance=ExtResource( 1 )]
+position = Vector2( 3595, 205 )
+
+[node name="Flappy" parent="." instance=ExtResource( 3 )]
+position = Vector2( 220, 245 )
+
+[node name="Camera2D" type="Camera2D" parent="Flappy"]
+visible = false
+current = true
+limit_left = 0
+limit_top = 0
+limit_bottom = 600
+drag_margin_top = 1.0
+drag_margin_bottom = 1.0
+editor_draw_drag_margin = true
+
+[connection signal="body_entered" from="restart" to="Flappy" method="_on_restart_body_entered"]
+[connection signal="body_entered" from="meta" to="Flappy" method="_on_meta_body_entered"]

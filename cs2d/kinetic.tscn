@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://cs2d/restart.tscn" type="PackedScene" id=1]
 [ext_resource path="res://cs2d/kineticbody.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://cs2d/terra.tscn" type="PackedScene" id=4]
 [ext_resource path="res://cs2d/sostre.tscn" type="PackedScene" id=5]
 [ext_resource path="res://cs2d/parets.tscn" type="PackedScene" id=6]
+[ext_resource path="res://flappy bird/meta.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D"]
 
@@ -15,7 +16,6 @@
 position = Vector2( 214, 199 )
 
 [node name="Camera2D" type="Camera2D" parent="Flappy"]
-visible = false
 position = Vector2( 0, 101 )
 current = true
 limit_left = 0
@@ -26,18 +26,22 @@ drag_margin_bottom = 1.0
 editor_draw_drag_margin = true
 
 [node name="restart" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1536, 558 )
+position = Vector2( 2047, 555 )
 
 [node name="Terra" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2047, 579 )
 
 [node name="sostre" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1535, -31 )
+position = Vector2( 2047, -23 )
 
 [node name="parets" parent="." instance=ExtResource( 6 )]
 position = Vector2( -10, 1 )
 
 [node name="parets2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 3073, 11 )
+position = Vector2( 4097, 11 )
+
+[node name="meta" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3595, 205 )
 
 [connection signal="body_entered" from="restart" to="Flappy" method="_on_restart_body_entered"]
+[connection signal="body_entered" from="meta" to="Flappy" method="_on_meta_body_entered"]
